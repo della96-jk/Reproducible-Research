@@ -54,7 +54,7 @@ ggplot(Total_Steps, aes(x = steps)) +
 
 @@ -89,7 +89,7 @@ IntervalDT <- activityDT[, c(lapply(.SD, mean, na.rm = TRUE)), .SDcols = c("step
 ggplot(IntervalDT, aes(x = interval , y = steps)) + geom_line(color="blue", size=1) + labs(title = "Avg. Daily Steps", x = "Interval", y = "Avg. Steps per day")
-```
+
 
 ![](https://github.com/Abhyuday1302/Reproducible-Research/blob/master/Project%201/unnamed-chunk-2.png)
 
@@ -62,7 +62,7 @@ ggplot(IntervalDT, aes(x = interval , y = steps)) + geom_line(color="blue", size
 
 @@ -148,7 +148,7 @@ Total_Steps[, .(Mean_Steps = mean(steps), Median_Steps = median(steps))]
 ggplot(Total_Steps, aes(x = steps)) + geom_histogram(fill = "blue", binwidth = 1000) + labs(title = "Daily Steps", x = "Steps", y = "Frequency")
-```
+
 
 ![](https://github.com/Abhyuday1302/Reproducible-Research/blob/master/Project%201/unnamed-chunk-3.png)
 
@@ -70,6 +70,5 @@ ggplot(Total_Steps, aes(x = steps)) + geom_histogram(fill = "blue", binwidth = 1
 |----------------------------------------|-------------|---------------|
 @@ -192,4 +192,4 @@ IntervalDT <- activityDT[, c(lapply(.SD, mean, na.rm = TRUE)), .SDcols = c("step
 ggplot(IntervalDT , aes(x = interval , y = steps, color=`weekday or weekend`)) + geom_line() + labs(title = "Avg. Daily Steps by Weektype", x = "Interval", y = "No. of Steps") + facet_wrap(~`weekday or weekend` , ncol = 1, nrow=2)
-```
 
 ![](https://github.com/Abhyuday1302/Reproducible-Research/blob/master/Project%201/unnamed-chunk-4.png)
